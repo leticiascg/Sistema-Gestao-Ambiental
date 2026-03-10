@@ -1,0 +1,123 @@
+.navbar {
+  background-color: #ACCC72;      
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 64px;
+  gap: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo */
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 8px;
+  margin-left: auto; 
+}
+
+
+/* dropdown */
+
+.nav-item {
+  position: relative; 
+}
+
+/* Botão do menu */
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.3px;
+  opacity: 0.92;
+  transition: opacity 0.2s, font-weight 0.2s;
+}
+
+/* Dropdown aberto */
+.nav-button.active {
+  font-weight: 700;
+  opacity: 1;
+}
+
+/* Chevron */
+.chevron {
+  transition: transform 0.2s ease;
+}
+
+/* Gira a seta quando o dropdown está aberto */
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+
+/* menu suspenso */
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);  
+  left: 50%;
+  transform: translateX(-50%); 
+
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+  min-width: 200px;
+  z-index: 100;
+  overflow: hidden;
+
+  opacity: 0;
+  pointer-events: none;         /* não clicável quando invisível */
+  transform: translateX(-50%) translateY(-6px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* Quando o dropdown está visível */
+.dropdown.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Seta decorativa no topo do dropdown */
+.dropdown-arrow {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Cada item dentro do dropdown */
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 11px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  color: #5f713d;     
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f7ee; 
+}
