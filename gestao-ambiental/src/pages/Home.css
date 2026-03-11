@@ -29,7 +29,7 @@
 /* Acesso rápido */
 
 .acesso-rapido {
-    padding: 16px 24px;
+    padding: 50px 24px;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@
     display: block;
     margin-bottom: 20px;
     align-self: flex-start;
-    padding-left: 280px;
+    padding-left: 160px;
 }
 
 .acesso-botoes {
@@ -73,10 +73,10 @@
 
 .servicos {
     background-color: #F4F4F4;
-    padding: 48px 40px 48px 300px;
+    padding: 48px 40px 48px 180px;
     display: flex;
     align-items: flex-start;
-    gap: 700px;
+    gap: 180px;
     position: relative;
     overflow: hidden;
     max-width: 100%;
@@ -97,7 +97,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     flex: 1;
-    max-width: 600px;
+    max-width: 900px;
 }
 
 .servico-card {
@@ -180,7 +180,7 @@
     font-weight: 600;
     margin-bottom: 20px;
     color: #000000;
-    padding-left: 280px;
+    padding-left: 160px;
 }
 
 .carrossel {
