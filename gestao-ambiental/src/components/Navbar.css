@@ -17,6 +17,13 @@
   width: auto;
 }
 
+.navbar-nome {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  flex: 1;
+}
+
 /* Links */
 .nav-links {
   display: flex;

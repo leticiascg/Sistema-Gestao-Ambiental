@@ -37,12 +37,13 @@
 }
 
 .acesso-label {
-    font-size: 20px;
+    font-size: 22px;
     color: #000000;
     font-weight: 600;
     display: block;
     margin-bottom: 20px;
     align-self: flex-start;
+    padding-left: 280px;
 }
 
 .acesso-botoes {
@@ -72,12 +73,14 @@
 
 .servicos {
     background-color: #F4F4F4;
-    padding: 48px 40px;
+    padding: 48px 40px 48px 300px;
     display: flex;
     align-items: flex-start;
-    gap: 40px;
+    gap: 700px;
     position: relative;
     overflow: hidden;
+    max-width: 100%;
+    margin: 0;
 }
 
 .servicos-titulo {
@@ -85,12 +88,16 @@
     font-weight: 600;
     color: var(--texto);
     padding-top: 4px;
+    min-width: 140px;
+    flex-shrink: 0;
 }
 
 .servicos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 50px;
+    flex: 1;
+    max-width: 600px;
 }
 
 .servico-card {
@@ -98,11 +105,12 @@
     border: 1px solid #e8e8e0;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    padding: 16px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;   
+    overflow: hidden;
 }
 
 .servico-card:hover {
@@ -130,6 +138,19 @@
     background: #F4F4F4;
 }
 
+.servicos::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 280px;
+    height: 280px;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.12;
+}
+
 .saiba-mais {
     background: none;
     border: none;
@@ -140,6 +161,7 @@
     padding: 0;
     text-align: left;
     width: fit-content;
+    margin-top: auto;
 }
 
 .saiba-mais:hover {
@@ -154,16 +176,19 @@
 }
 
 .informativa-titulo {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 600;
     margin-bottom: 20px;
     color: #000000;
+    padding-left: 280px;
 }
 
 .carrossel {
     display: flex;
     align-items: center;
     gap: 12px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .carrossel-btn {

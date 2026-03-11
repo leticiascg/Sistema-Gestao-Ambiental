@@ -67,6 +67,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <img src="/img/logo.png" alt="Logo" className="navbar-logo" />
+      <span className = "navbar-nome">Gestão de Resíduos Ambientais</span>
 
       <div className="nav-links">
         {/* Gera um NavItem para cada chave do dropdownData */}
