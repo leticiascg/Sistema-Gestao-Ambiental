@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const dropdownData = {
-  Serviços: ["Serviço 1", "Serviço 2", "Serviço 3"],
+  Serviços: ["Coleta", "Destinação", "Limpeza Urbana"],
   Sustentabilidade: ["Compensação de Carbono", "Projetos Sociais", "Educação Ambiental"],
   "Fale conosco": ["Contato", "Suporte", "Parcerias", "Trabalhe Conosco"],
 };
