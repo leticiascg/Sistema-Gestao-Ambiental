@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const dropdownData = {
@@ -64,9 +65,17 @@ const NavItem = ({ label }) => {
 
 //COMPONENTE PRINCIPAL
 export default function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <nav className="navbar">
-      <img src="/img/logo.png" alt="Logo" className="navbar-logo" />
+      <img 
+        src="/img/logo.png" 
+        alt="Logo" 
+        className="navbar-logo"
+        onClick = {() => navigate("/")} 
+        style = {{cursor: "pointer" }}
+      />
       <span className = "navbar-nome">Gestão de Resíduos Ambientais</span>
 
       <div className="nav-links">
