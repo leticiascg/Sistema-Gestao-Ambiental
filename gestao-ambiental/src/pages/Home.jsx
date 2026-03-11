@@ -1,5 +1,6 @@
 import "./Home.css";
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 const servicos = [
     {
@@ -34,6 +35,7 @@ const slides = [
 ];
 
 export default function Home() {
+    const navigate = useNavigate();
     const [slideAtual, setSlideAtual] = useState(0);
 
     const anterior = () =>
@@ -50,9 +52,9 @@ export default function Home() {
             <section className = "acesso-rapido">
                 <span className = "acesso-label">Acesso rápido</span>
                 <div className = "acesso-botoes">
-                    <button className = "btn-v">Solicitar coleta</button>
-                    <button className = "btn-v">Denúncias</button>
-                    <button className = "btn-v">Procedimentos de descarte</button>
+                    <button className = "btn-v" onClick = {() => navigate("/solicitar-coleta")}>Solicitar coleta</button>
+                    <button className = "btn-v" onClick = {() => navigate("/denuncias")}>Denúncias</button>
+                    <button className = "btn-v" onClick = {() => navigate("/procedimentos-descarte")}>Procedimentos de descarte</button>
                 </div>
             </section>
 
@@ -80,6 +82,7 @@ export default function Home() {
                     <button className = "carrossel-btn" onClick = {proximo}>&#8250;</button>
                 </div>
             </section>
+
         </main>
     )
 }
